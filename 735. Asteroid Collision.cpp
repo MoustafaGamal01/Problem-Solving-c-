@@ -12,11 +12,7 @@ public:
                 int top = st.top();
                 st.pop();
                 int prv = st.top();
-
-                if((prv > 0 && top > 0)||(top < 0 && prv < 0)){
-                    st.push(top);
-                    break;
-                }
+                
                 if(prv > 0 && top < 0){
                     int pos = abs(top);
                     if(pos > prv) st.pop(), st.push(top);
