@@ -16,8 +16,6 @@ public:
         ListNode *cur = head, *nxt = cur->next;
         ListNode *temp = nxt;
 
-        if(nxt->next == nullptr) return head;
-
         while(cur->next != nullptr && nxt->next != nullptr){
             cur->next = nxt->next;
             cur = nxt->next;
