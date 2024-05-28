@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int equalSubstring(string s, string t, int maxCost) {
+        int x = s.size();
+        int l(0), r(0), cnt(0), mx(0);
+        
+        if(s == t) return x;
+        while(r < x){
+            int y = abs(s[r]-t[r]);
+            if(y <= maxCost) {
+                maxCost -= y;
+                cnt+=1;
+                ++r;
+            }     
+            else {
+                mx = max(mx, cnt);
+                cnt-=1;
+                maxCost += abs(s[l]-t[l]);
+                ++l;
+            }
+        }
+        return max(mx, cnt);
+    }
+};
