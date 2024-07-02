@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int DP(int i, vector<int>& nums, map<int, int>& memo) {
+        if (i >= nums.size()) return 0;
+        if (memo.find(i) != memo.end()) return memo[i];
+
+        return memo[i] = max(DP(i + 1, nums, memo), (nums[i] + DP(i + 2, nums, memo)));
+    }
+
+    int rob(vector<int>& nums) {
+        map<int, int> memo;
+        return DP(0, nums, memo);
+    }
+};
