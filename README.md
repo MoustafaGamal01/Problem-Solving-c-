@@ -1,2 +1,2 @@
-Random Problmes on LeetCode most of them is Medium.
+Random Problmes on LeetCode.
 Find Me: @MoustafaGama1
