@@ -1,2 +1,2 @@
-Random Problmes on LeetCode.
-Find Me: @MoustafaGama1
+The LeetCode 75 plan, along with other random problems.
+Find me: @MoustafaGama1
