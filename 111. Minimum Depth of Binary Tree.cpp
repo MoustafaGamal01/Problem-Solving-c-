@@ -34,3 +34,18 @@ public:
         return BFS(root);
     }
 };
+
+/* another solution (not optimized but will pass)
+class Solution {
+public:
+    int minDepth(TreeNode* root, vector<int>& memo) {
+        if(!root) return 0;
+        if(!root->left && !root->right) return 1;
+
+        int op1 = root->left ? 1 + minDepth(root->left) : INT_MAX;
+        int op2 = root->right ? 1 + minDepth(root->right) : INT_MAX; 
+
+        return min(op1, op2);
+    }
+};
+*/
